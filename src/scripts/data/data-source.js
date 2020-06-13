@@ -6,7 +6,7 @@ class DataSource {
                 if (responseJson.Search) {
                     return Promise.resolve(responseJson.Search)
                 } else {
-                    return Promise.reject("not found !!")
+                    return Promise.reject("Film Tidak Ditemukan!!")
                 }
             })
     }
@@ -18,7 +18,7 @@ class DataSource {
                 if (responseJson) {
                     return Promise.resolve(responseJson)
                 } else {
-                    return Promise.reject("Not FOund")
+                    return Promise.reject("Film Tidak Ditemukan!!")
                 }
             })
     }

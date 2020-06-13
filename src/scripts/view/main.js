@@ -12,13 +12,17 @@ const main = () => {
             const dataMovie = await DataSource.cariFilm(elemenSearch.value);
             renderResult(dataMovie);
         } catch (message) {
-            console.log(message)
+            errorHandling(message);
         }
 
     }
 
     const renderResult = result => {
         movieContainer.movies = result;
+    }
+
+    const errorHandling = message => {
+        movieContainer.renderError(message);
     }
 
     elemenSearch.clickHandler = handleClick;
