@@ -16,6 +16,7 @@ class MovieContainer extends HTMLElement {
     render() {
         this.shadowDom.innerHTML = "";
         this._movies.forEach(movie => {
+            console.log(movie)
             const movieItemElement = document.createElement("movie-item");
             movieItemElement.movie = movie;
             this.shadowDom.appendChild(movieItemElement);
